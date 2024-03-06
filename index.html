@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        .lab-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .student-info {
+            margin-top: 20px;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+        }
+        .lab-block {
+            display: none;
+        }
+        
+        .lab-info {
+            width: 100px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ellipse {
+            width: 150px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .lab-info:hover {
+            background-color: lightgrey;
+        }
+        .selected {
+            background-color: lightgrey;
+        }
+        .lab-content{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .lab-block.active {
+            align-self: flex-start;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .info-block {
+            display: none;
+        }
+        .info-block.active {
+            margin-top: 100px;
+            display: block;
+        }
+        .selectors {
+            display: flex;
+            flex-direction: column;
+        }
+        .selector{
+            display: flex;
+            flex-direction: row;
+        }
+        .info-block span {
+            font-weight: normal; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Звіти з лабораторних робіт з дисципліни "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ ОСНОВИ FRONTEND ТА BACKEND РОЗРОБОК"</h1>
+        <div class="student-info">
+            <p>Студент гр. № ІО-16 Лашкул Єгор Сергійович</p>
+            <img src="a.jpg" alt="Фото студента" height="100px">
+        </div>
+        <div class="lab-nav">
+            <div class="lab-info" onclick="showLab(1)">Лабораторна робота 1</div>
+            <div class="lab-info" onclick="showLab(2)">Лабораторна робота 2</div>
+            <div class="lab-info" onclick="showLab(3)">Лабораторна робота 3</div>
+            <div class="lab-info" onclick="showLab(4)">Лабораторна робота 4</div>
+            <div class="lab-info" onclick="showLab(5)">Лабораторна робота 5</div>
+            <div class="lab-info" onclick="showLab(6)">Лабораторна робота 6</div>
+            <div class="lab-info" onclick="showLab(7)">Лабораторна робота 7</div>
+            <div class="lab-info" onclick="showLab(8)">Лабораторна робота 8</div>
+        </div>
+        <div class="lab-content">
+            <div class="lab-block" id="lab1">
+                <h2>Лабораторна робота 1</h2>
+                <div class="ellipse" onclick="showInfo(1,1)"><p>Опис предметного середовища</p></div>
+                <div class="ellipse" onclick="showInfo(1,2)"><p>Тема, мета ЛР, Місце розташування сайту</p></div>
+                <div class="ellipse" onclick="showInfo(1,3)"><p>Структура документа</p></div>
+                <div class="ellipse" onclick="showInfo(1,4)"><p>Висновки</p></div>
+                
+            </div>
+            <div class="lab-block" id="lab2">
+                <h2>Лабораторна робота 2</h2>
+                <div class="ellipse" onclick="showInfo(2,1)"><p>Тема, мета ЛР, Місце розташування сайту</p></div>
+                <div class="ellipse" onclick="showInfo(2,2)"><p>Способи підключення стилів</p></div>
+                <div class="ellipse" onclick="showInfo(2,3)"><p>Селектори</p></div>
+                <div class="ellipse" onclick="showInfo(2,4)"><p>CSS: Шрифти Текст Таблиці Фон Контур</p></div>
+                <div class="ellipse" onclick="showInfo(2,5)"><p>Висновки</p></div>
+            </div>
+            <div class="content">
+                <div class="info-block" id="info1-1">
+                    <h3>Предметне середовище: <span>Предметним середовищем для лабораторної роботи є розробка веб-сайту для пекарні.
+                         Для цього використовується сучасний стек технологій, включаючи HTML, CSS і JavaScript для розробки фронтенду.
+                         Для управління версіями та спільної роботи над проєктом 
+                         використовується система контролю версій Git та хмарний сервіс GitHub.</span></h3>
+                </div>
+                <div class="info-block" id="info1-2">
+                    <h3>Тема: <span>СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ.
+                        РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в
+                        HTML-ДОКУМЕНТІ.</span></h3>
+                    <h3>Мета: <span>придбати практичні навички роботи з HTML-документом, таблицями, ,
+                        зображеннями, посиланнями, списками, формами
+                        Створити шаблон звітного HTML-документом для відображення
+                        результатів роботи всіх лабораторних робіт.</span></h3>
+                    <h3>Сайт: <span><a href="https://github.com/Blindcoke/Bakery-website">https://github.com/Blindcoke/Bakery-website</a></span></h3>
+                </div>
+                <div class="info-block" id="info1-3">
+                    <h3>Структура html документа</h3>
+                    <ol>
+                        <li>
+                            HTML-код таблиць:
+                            <pre>
+                        &lt;table id="working-hours"&gt;
+                            &lt;caption&gt;Working Hours&lt;/caption&gt;
+                            &lt;tr&gt;
+                            &lt;th&gt;Day&lt;/th&gt;
+                            &lt;th&gt;Hours&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;Monday&lt;/td&gt;
+                            &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;Tuesday&lt;/td&gt;
+                            &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;Wednesday&lt;/td&gt;
+                            &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;Thursday&lt;/td&gt;
+                            &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                            &lt;td&gt;Friday&lt;/td&gt;
+                            &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                        </pre>
+                        </li>
+                        <li>
+                            HTML-код форми:
+                            <pre>
+                                &lt;section id="weekly-poll"&gt;
+                                  &lt;h2&gt;Weekly Poll&lt;/h2&gt;
+                                  &lt;form action="poll.php" method="post"&gt;
+                                    &lt;label for="frequency"&gt;How often do you eat our products?&lt;/label&gt;
+                                    &lt;input type="text" id="frequency" name="frequency"&gt;
+                                    &lt;label for="preference"&gt;Do you prefer our bakings with coffee or tea?&lt;/label&gt;
+                                    &lt;input type="text" id="preference" name="preference"&gt;
+                                    &lt;input type="submit" value="Submit"&gt;
+                                  &lt;/form&gt;
+                                &lt;/section&gt;
+                              </pre>
+                        </li>
+                        <li>
+                            Зображення:
+                          <pre>&lt;img src="bakery.jpg" alt="Bakery Inside"&gt;</pre>
+                        </li>
+                      </ol>
+                </div>
+                <div class="info-block" id="info1-4">
+                    <h3>Висновок: <span>У лабораторній роботі було створено HTML-сторінку з наступною структурою:Заголовок сторінки з логотипом і навігаційним меню.
+                        Розділ "Hot News" з новинами та їх зображеннями.
+                        Розділ "Weekly Poll" з формою опитування.
+                        Боковий блок із переліком продуктів, найкращими працівниками та графіком роботи.
+                        Карта Google Maps для відображення місцезнаходження.
+                        Зображення внутрішньої частини пекарні.
+                        Нижня частина сторінки (футер) з контактною інформацією та посиланнями.</span></h3>
+                </div>
+                <div class="info-block" id="info2-1">
+                    <h3>Тема: <span>КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ
+                        ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.</span></h3>
+                    <h3>Мета: <span>придбати практичні навички роботи з селекторами, ідентифікаторами,
+                        списками, різноманітними властивостями кольору і фону, зовнішними та
+                        внутрішними відступами, плаваючими елементами, оформленням текстових
+                        елементів</span></h3>
+                    <h3>Сайт: <span><a href="https://github.com/Blindcoke/Bakery-website/tree/lab2">https://github.com/Blindcoke/Bakery-website</a></span></h3>
+                </div>
+                <div class="info-block" id="info2-2">
+                    <h3>Способи підключення стилів</h3>
+                    <p>Існує кілька способів підключення стилів до веб-сторінки:
+
+                        Вбудований CSS: Стилі можна вбудувати безпосередньо всередині HTML-документу, використовуючи тег <&lt;style&gt;> в розділі <&lt;head&gt;>.
+                        Зовнішній CSS: Стилі можна розмістити в окремому файлі CSS з розширенням .css, а потім підключити його до HTML-сторінки за допомогою тегу <&lt;link&gt;>.
+                        Inline CSS: Можна також задати стилі безпосередньо всередині тегів HTML за допомогою атрибуту style. </p>
+                </div>
+                <div class="info-block" id="info2-3">
+                    <h3>Селектори</h3>
+                    <div class="selectors">
+                        <div class="selector">
+                            <h4>Селектор класу</h4>
+                            <p><pre>
+                                .price {
+                                    background-color: #5394A2; 
+                                    color: black;
+                                    text-align: center;
+                                    font-size: 24px;
+                                    width: 70px;
+                                    height: 45px;
+                                    border-radius: 30%; 
+                                    cursor: pointer; 
+                                    display: flex; 
+                                    justify-content: center; 
+                                    align-items: center; 
+                                    transition: background-color 0.3s; 
+                                }
+                        
+                                .price:hover {
+                                    background-color: #0056b3; 
+                                }
+                            </pre></p>
+                            <img src="Capture.PNG" alt="Селектор класу" height="50px">
+                        </div>
+                        <div class="selector">
+                            <h4>Селектор ідентифікатора</h4>
+                            <p><pre>
+                                #hot-news{
+                                    background-color: #D2A0A0;
+                                    overflow: hidden;
+                                }
+                                
+                                #hot-news h2 {
+                                    margin-top: 0;
+                                    font-family: 'Oooh Baby';
+                                    text-align: center; 
+                                }
+                            </pre></p>
+                            <img src="Capture2.PNG" alt="Селектор ідентифікатора" height="50px">
+                        </div>
+                        <div class="selector">
+                            <h4>Селектор тегу</h4>
+                            <p><pre>
+                                nav a {
+                                    margin-right: 80px;
+                                    margin-top: 25px; 
+                                    text-decoration: none; 
+                                    color: black; 
+                                    
+                                    font-family: 'Open Sans', sans-serif;
+                                    font-size: large;
+                                }
+                                
+                            </pre></p>
+                            <img src="Capture3.PNG" alt="Селектор тегу" height="50px">
+                        </div>
+                    </div>
+                </div>
+                <div class="info-block" id="info2-4">
+                    <h3>Шрифти:</h3>
+                    <pre>
+                        h1 {
+                            font-family: 'Oooh Baby';
+                            text-align: center;
+                            margin-top: 0;
+                        }
+                    </pre>
+                    <h3>Контури:</h3>
+                    <pre>
+                        #working-hours {
+                            border: 2px solid #0056b3;
+                            border-radius: 10px;
+                            margin: 0 auto;
+                            width: 50%;
+                            text-align: center;
+                        }
+                    </pre>
+                    <h3>Фон:</h3>
+                    <pre>
+                        #weekly-poll {
+                            background-color: #D2A0A0;
+                            overflow: hidden;
+                        }
+                    </pre>
+                    <h3>Для таблиць:</h3>
+                    <pre>
+                        aside table {
+                            margin: 0px;
+                            padding: 0px;
+                            border-collapse: collapse;
+                            text-align: center;
+                        }
+                        
+                        aside td {
+                            border: 1px solid #000; 
+                          }
+                        
+                        aside table caption {
+                            font-size: 28px;
+                            margin-bottom: 20px;
+                            font-weight: bold;
+                        }
+                    </pre>                        
+                </div>
+                <div class="info-block" id="info2-5">
+                    <h3>Висновок: <span>У ході цієї лабораторної роботи ми ознайомилися з різними способами підключення стилів до веб-сторінок 
+                        та їх застосування. Ми використовували вбудований CSS, зовнішні файли стилів та внутрішні стилі для задання вигляду елементів
+                         на сторінці. Також ми досліджували різноманітні селектори для точного визначення елементів, до яких ми застосовували стилі.
+                        Крім того, ми вивчили різні типи стилів, такі як кольори, шрифти, контури, фонові зображення та CSS-властивості для таблиць 
+                        та багаторівневих списків. Кожен з цих стилів може бути застосований для покращення зовнішнього вигляду веб-сторінки та забезпечення 
+                        кращого користувацького досвіду.
+                        У результаті лабораторної роботи ми набули розуміння того, як використовувати CSS для створення привабливого та функціонального дизайну веб-сторінок,
+                        а також як застосовувати ці стилі для різних елементів сторінки.</span></h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showLab(labNumber) {
+            const labBlocks = document.querySelectorAll('.lab-block');
+            const infoBlocks = document.querySelectorAll('.info-block');
+            labBlocks.forEach(block => {
+                block.classList.remove('active');
+            });
+            infoBlocks.forEach(block => {
+                        block.classList.remove('active');
+                    });
+            document.getElementById('lab' + labNumber).classList.add('active');
+        }
+        function showInfo(infoNumber, contentNumber) {
+            const infoBlocks = document.querySelectorAll('.info-block');
+            infoBlocks.forEach(block => {
+                        block.classList.remove('active');
+                    });
+            document.getElementById(`info${infoNumber}-${contentNumber}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
