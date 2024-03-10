@@ -90,6 +90,34 @@
         .info-block span {
             font-weight: normal; 
         }
+
+
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            width: 100px;
+        }
+        .left-panel {
+            width: 200px;
+            height: 300px;
+            background-color: yellow;
+        }
+        th {
+            background-color: lightblue;
+        }
+        .main-content {
+            height: 300px;
+            width: 600px; 
+        }
+        table {
+            border-collapse: collapse;
+        }
+        
+        .footer {
+            background-color: lightblue;
+        }
+
     </style>
 </head>
 <body>
@@ -125,6 +153,17 @@
                 <div class="ellipse" onclick="showInfo(2,3)"><p>Селектори</p></div>
                 <div class="ellipse" onclick="showInfo(2,4)"><p>CSS: Шрифти Текст Таблиці Фон Контур</p></div>
                 <div class="ellipse" onclick="showInfo(2,5)"><p>Висновки</p></div>
+            </div>
+            <div class="lab-block" id="lab3">
+                <h2>Лабораторна робота 3</h2>
+                <div class="ellipse" onclick="showInfo(3,1)"><p>Тема, мета ЛР, Місце розташування сайту</p></div>
+                <div class="ellipse" onclick="showInfo(3,2)"><p>Завдання 1</p></div>
+                <div class="ellipse" onclick="showInfo(3,3)"><p>Завдання 2: Фіксована таблична верстка</p></div>
+                <div class="ellipse" onclick="showInfo(3,4)"><p>Завдання 2: Гумова таблична верстка</p></div>
+                <div class="ellipse" onclick="showInfo(3,5)"><p>Завдання 2: Фіксована блокова верстка</p></div>
+                <div class="ellipse" onclick="showInfo(3,6)"><p>Завдання 2: Гумова блокова верстка</p></div>
+                <div class="ellipse" onclick="showInfo(3,7)"><p>Завдання 3: FLEXBOX</p></div>
+                <div class="ellipse" onclick="showInfo(3,8)"><p>Висновки</p></div>
             </div>
             <div class="content">
                 <div class="info-block" id="info1-1">
@@ -342,7 +381,497 @@
                         У результаті лабораторної роботи ми набули розуміння того, як використовувати CSS для створення привабливого та функціонального дизайну веб-сторінок,
                         а також як застосовувати ці стилі для різних елементів сторінки.</span></h3>
                 </div>
-            </div>
+
+
+                <div class="info-block" id="info3-1">
+                    <h3>Тема: <span>ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА. ВЕРСТКА
+                        ЗАСОБАМИ CSS та FLEXBOX.</span></h3>
+                    <h3>Мета: <span><br>⎯ придбати практичні навички роботи верстки сторінок засобами CSS, верстки на
+                        основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-
+                        сторінок
+                        <br>⎯ придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX</span></h3>
+                    <h3>Сайт: <span><a href="https://github.com/Blindcoke/Bakery-website/tree/lab2">https://github.com/Blindcoke/Bakery-website</a></span></h3>
+                </div>
+                <div class="info-block" id="info3-2">
+                    <h3>Зовнішній вигляд макету</h3>
+                    <p>
+                        За своїм розміщенням елементів і структурою, цей HTML-код схожий на "Блочний (Block)". У цьому випадку елементи такі
+                         як header, main, section, aside та footer використовуються для виділення різних частин сторінки, що розміщуються одна під одною або бічно.
+                        Кожна з цих частин сторінки має свою структуру та може включати додаткові вкладені блоки.</p>
+
+                    <p>
+                        
+                        У цьому CSS-коді застосовується базова концепція блочного розміщення елементів на сторінці. Кожен елемент оформлення 
+                         використовується для групування певних частин контенту сторінки.
+                         Найбільша увага приділяється використанню гнучких контейнерів (display: flex), що дозволяє створювати адаптивний і гнучкий дизайн.
+                    </p>
+                    <img src = "web_main.jpg"  alt="web_main" width="100%">
+                    <h3>Код макету:</h3>
+                    Sure, here's the HTML code wrapped inside `<pre>` tags so it will display as text on a webpage:
+                        <pre>
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang="en"&gt;
+                            &lt;head&gt;
+                              &lt;meta charset="UTF-8"&gt;
+                              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                              &lt;title&gt;Головна сторінка&lt;/title&gt;
+                              &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"&gt;
+                              &lt;link href='https://fonts.googleapis.com/css?family=Oooh Baby' rel='stylesheet'&gt;
+                              &lt;link rel="stylesheet" href="/css/style.css"&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                            
+                            &lt;header&gt;
+                              &lt;nav&gt;
+                                &lt;h1&gt;&lt;i class="fas fa-birthday-cake"&gt;&lt;/i&gt; Пахощі на подвір'ї&lt;/h1&gt;
+                                &lt;a href="#bakings"&gt;Bakings&lt;/a&gt;
+                                &lt;a href="#family"&gt;Family Own&lt;/a&gt;
+                                &lt;a href="#order"&gt;Order&lt;/a&gt;
+                                &lt;a href="#basket"&gt;Basket&lt;/a&gt;
+                                &lt;a href="#contacts"&gt;Contacts&lt;/a&gt;
+                              &lt;/nav&gt;
+                            &lt;/header&gt;
+                            
+                            &lt;main&gt;
+                              &lt;section id="hot-news"&gt;
+                                &lt;h2&gt;Hot New!&lt;/h2&gt;
+                                &lt;div class="scrolling-container"&gt;
+                                  &lt;div class="news-card"&gt;
+                                    &lt;img src="donut.jpg" alt="Donut with cream" width="200" height="200"&gt;
+                                    &lt;h3&gt;Donut with cream&lt;/h3&gt;
+                                    &lt;p class="price"&gt;45 ₴&lt;/p&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="news-card"&gt;
+                                    &lt;img src="cake.png" alt="Chocolate cake" width="200" height="200"&gt;
+                                    &lt;h3&gt;Chocolate cake&lt;/h3&gt;
+                                    &lt;p class="price"&gt;285 ₴&lt;/p&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="news-card"&gt;
+                                    &lt;img src="cake.png" alt="Chocolate cake" width="200" height="200"&gt;
+                                    &lt;h3&gt;Chocolate cake&lt;/h3&gt;
+                                    &lt;p class="price"&gt;285 ₴&lt;/p&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="news-card"&gt;
+                                    &lt;img src="cake.png" alt="Chocolate cake" width="200" height="200"&gt;
+                                    &lt;h3&gt;Chocolate cake&lt;/h3&gt;
+                                    &lt;p class="price"&gt;285 ₴&lt;/p&gt;
+                                  &lt;/div&gt;
+                                  &lt;button id="scroll-left"&gt;&#8249;&lt;/button&gt;
+                                  &lt;button id="scroll-right"&gt;&#8250;&lt;/button&gt;
+                                &lt;/div&gt;
+                              &lt;/section&gt;
+                            
+                            
+                              &lt;aside&gt;
+                                &lt;section id="weekly-poll"&gt;
+                                  &lt;form action="poll.php" method="post"&gt;
+                                    &lt;h2&gt;Weekly Poll&lt;/h2&gt;
+                                    &lt;label for="frequency"&gt;How often do you eat our products?&lt;/label&gt;
+                                    &lt;input type="text" id="frequency" name="frequency"&gt;
+                                    &lt;label for="preference"&gt;Do you prefer our bakings with coffee or tea?&lt;/label&gt;
+                                    &lt;input type="text" id="preference" name="preference"&gt;
+                                    &lt;input type="submit" value="Submit"&gt;
+                                  &lt;/form&gt;
+                                  &lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.104698347793!2d-0.11464818402735782!
+                                  3d51.50340501995599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760540740d3cdd%3A0x1b427d25d4d7923e!2s
+                                  Buckingham%20Palace!5e0!3m2!1sen!2suk!4v1589284420769!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0;"
+                                   allowfullscreen="" aria-hidden="false" tabindex="0"&gt;&lt;/iframe&gt;
+                                &lt;/section&gt;
+                                &lt;div id="you-can-find"&gt;
+                                  &lt;h3&gt;You can find:&lt;/h3&gt;
+                                  &lt;ul&gt;
+                                    &lt;li&gt;Baked bread&lt;/li&gt;
+                                    &lt;li&gt;Cakes&lt;/li&gt;
+                                    &lt;li&gt;Croissant&lt;/li&gt;
+                                    &lt;li&gt;Donuts&lt;/li&gt;
+                                    &lt;li&gt;Roguelikes&lt;/li&gt;
+                                    &lt;li&gt;Puffs&lt;/li&gt;
+                                  &lt;/ul&gt;
+                                  &lt;h3&gt;Best workers:&lt;/h3&gt;
+                                  &lt;ul&gt;
+                                    &lt;li&gt;Mark Bandera&lt;/li&gt;
+                                    &lt;li&gt;Anastasia Petlura   &lt;/li&gt;
+                                  &lt;/ul&gt;
+                                &lt;/div&gt;
+                                &lt;div id="photo-table"&gt;
+                                  &lt;table id="working-hours"&gt;
+                                    &lt;caption&gt;Working Hours&lt;/caption&gt;
+                                    &lt;tr&gt;
+                                      &lt;th&gt;Day&lt;/th&gt;
+                                      &lt;th&gt;Hours&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                      &lt;td&gt;Monday&lt;/td&gt;
+                                      &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                      &lt;td&gt;Tuesday&lt;/td&gt;
+                                      &lt;td
+                        
+                        &gt;10:00 - 18:00&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                      &lt;td&gt;Wednesday&lt;/td&gt;
+                                      &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                      &lt;td&gt;Thursday&lt;/td&gt;
+                                      &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                      &lt;td&gt;Friday&lt;/td&gt;
+                                      &lt;td&gt;10:00 - 18:00&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                  &lt;/table&gt;
+                                  &lt;img src="bakery.jpg" alt="Bakery Inside"  style="aspect-ratio: auto; height: 300px;"&gt;
+                                &lt;/div&gt;
+                              &lt;/aside&gt;
+                            &lt;/main&gt;
+                            &lt;footer&gt;
+                              &lt;div id="footer-top"&gt;
+                                &lt;p&gt;&lt;i class="fas fa-phone"&gt;&lt;/i&gt; +380972281488&lt;/p&gt;
+                                &lt;p&gt;&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;: bakeryfamily@gmail.com&lt;/p&gt;
+                                &lt;p&gt;&lt;a href = https://www.azov-one.com/donate&gt;&lt;i class="fas fa-cookie"&gt;&lt;/i&gt; на ЗСУ&lt;/a&gt;&lt;/p&gt;
+                              &lt;/div&gt;
+                              &lt;div id="footer-bottom"&gt;Ⓒ 2024 Copyright: Bootstrap.com
+                              &lt;/div&gt;
+                            &lt;/footer&gt;
+                            &lt;/script&gt;
+                            &lt;/body&gt;
+                            &lt;/html&gt;
+                        </pre>
+                </div>
+                <div class="info-block" id="info3-3">
+                    <h3>Фіксована таблична верстка</h3>
+                    <table width="700" align = "center">
+                        <tr>
+                            <td rowspan="3" class="left-panel"></td>
+                            <td rowspan="3"></td>
+                            <th colspan="2">Header</th>
+                            <td rowspan="3"></td>
+                        </tr>
+                        <tr>
+                            <td class="main-content">Main</td>
+                        </tr>
+                        <tr class="footer">
+                            <td>Footer</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="info-block" id="info3-4">
+                    <h3>Гумова таблична верстка</h3>
+                    <table width="100%" align = "center">
+                        <tr>
+                            <td rowspan="3" class="left-panel"></td>
+                            <td rowspan="3"></td>
+                            <th colspan="2">Header</th>
+                            <td rowspan="3"></td>
+                        </tr>
+                        <tr>
+                            <td  class="main-content" >Main</td>
+                        </tr>
+                        <tr class="footer">
+                            <td>Footer</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="info-block" id="info3-5">
+                    <h3>Фіксована блочна верстка</h3>
+                    <div style="width: 700px; height: 300px;">
+                        <div style="width: 150px; height: 300px; background-color: yellow; float: left;">Left Panel</div>
+                        <div style= "float: right;"> 
+                            <div style="width: 500px; height: 75px; background-color: lightblue;">Header</div>
+                            <div style="width: 500px; height: 150px;">Main Content</div>
+                            <div style="width: 500px; height: 75px; background-color: lightblue;">Footer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-block" id="info3-6">
+                    <h3>Гумова блочна верстка</h3>
+                    <div style="width: 100%; height: 300px;">
+                        <div style="width: 20%; height: 300px; background-color: yellow; float: left;">Left Panel</div>
+                        <div style="width: 75%; float: right;"> 
+                            <div style="width: 100%; height: 75px; background-color: lightblue;">Header</div>
+                            <div style="width: 100%; height: 150px;">Main Content</div>
+                            <div style="width: 100%; height: 75px; background-color: lightblue;">Footer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-block" id="info3-7">
+                    <h3>Вигляд сторінки</h3>
+                    <img src = "task3.png"  alt="web_main" width="100%">
+                    <h3>HTML</h3>
+                    <pre>
+                        <body>
+                            <code>
+                                &lt;div class="container"&gt;
+                                    &lt;div class="content"&gt;
+                                        &lt;div class="course-info"&gt;
+                                            &lt;img src="logo.png" alt="Course Image" height="600px" width="500px"&gt;
+                                            &lt;div class="course-description"&gt;
+                                                &lt;h2&gt;HTML і CSS: професійний курс
+                                                    &lt;br&gt;Частина 1&lt;/h2&gt;
+                                                &lt;div class="sale"&gt;&lt;p class="price"&gt;1190 грн&lt;/p&gt;
+                                                    &lt;p class="discounted-price"&gt;390 грн&lt;/p&gt;
+                                                &lt;/div&gt;
+                                                &lt;p class="economy"&gt;&lt;i class="fas fa-piggy-bank"&gt;&lt;/i&gt;Ви економите 800 грн(67%)&lt;/p&gt;
+                                                &lt;p class="hurry"&gt;&lt;i class="fas fa-clock"&gt;&lt;/i&gt;Покваптеся! Закінчується через 1 день&lt;br&gt; 12 год 38 хвилин&lt;/p&gt;
+                                                &lt;p class="discribe"&gt;Відео запс курсу HTML та CSS. На цьому курсі&lt;br&gt;
+                                                    ви навчитеся робити справжні проекти,такі ж за&lt;br&gt;
+                                                    рівнем складності, які вимагаються на ринку працію&lt;br&gt;
+                                                    І будете робити їх правильно, щоб після навчання&lt;br&gt;
+                                                    видавати результат високого рівня!
+                                                &lt;/p&gt;
+                                                &lt;button class="buy-button"&gt;Купити-&gt;&lt;/button&gt;
+                                                &lt;div class = "benefits"&gt;
+                                                    &lt;p&gt;&lt;i class="fas fa-money-bill"&gt;&lt;/i&gt;Безпечні платежі&lt;/p&gt;
+                                                    &lt;p&gt;&lt;i class="fas fa-shield"&gt;&lt;/i&gt;Захист персональних даних&lt;/p&gt;
+                                                    &lt;p&gt;&lt;i class="fas fa-fingerprint"&gt;&lt;/i&gt;100% унікальні дані&lt;/p&gt;
+                                                    &lt;p&gt;&lt;i class="fas fa-wallet"&gt;&lt;/i&gt;Гарантія кращої ціни&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;h3&gt;Схожі товари&lt;/h3&gt;
+                                    &lt;div class="similar-courses"&gt;
+                                        &lt;div class="similar-course"&gt;
+                                            &lt;img src="linux.png" alt="Course Image" height="200px" width="200px"&gt;
+                                            &lt;p class="info"&gt;Linux з нуля-відеокурс&lt;/p&gt;
+                                            &lt;div class="sale"&gt;&lt;p class="full-price"&gt;1190 грн &lt;/p&gt;
+                                                &lt;p class="disc-price"&gt; 390 грн&lt;/p&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="similar-course"&gt;
+                                            &lt;img src="windows.png" alt="Course Image" height="200px" width="200px"&gt;
+                                            &lt;p class="info"&gt;Linux з нуля-відеокурс&lt;/p&gt;
+                                            &lt;div class="sale"&gt;&lt;p class="full-price"&gt;790 грн &lt;/p&gt;
+                                                &lt;p class="disc-price"&gt; 290 грн&lt;/p&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="similar-course"&gt;
+                                            &lt;img src="angular.png" alt="Course Image" height="200px" width="200px"&gt;
+                                            &lt;p class="info"&gt;Linux з нуля-відеокурс&lt;/p&gt;
+                                            &lt;div class="sale"&gt;&lt;p class="full-price"&gt;1190 грн &lt;/p&gt;
+                                                &lt;p class="disc-price"&gt; 390 грн&lt;/p&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="similar-course"&gt;
+                                            &lt;img src="sys.png" alt="Course Image" height="200px" width="200px"&gt;
+                                            &lt;p class="info"&gt;Linux з нуля-відеокурс&lt;/p&gt;
+                                            &lt;div class="sale"&gt;
+                                                &lt;p class="buy"&gt; Купить&lt;/p&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="footer"&gt;
+                                        &lt;div class="contacts"&gt;
+                                            &lt;p&gt;Допомога&lt;/p&gt;
+                                            &lt;p&gt;Зв'язатися з нами&lt;/p&gt;
+                                            &lt;p&gt;Наші партнери&lt;/p&gt;
+                                            &lt;p&gt;Безпечні платежі&lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="lower-footer"&gt;   
+                                            &lt;div class="extra-info"&gt;   
+                                                &lt;p&gt;Довідка&lt;/p&gt;
+                                                &lt;p&gt;конфіденційність&lt;/p&gt;
+                                                &lt;p&gt;Умови використання&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;p class="envelope"&gt; &lt;i class="fas fa-envelope"&gt;&lt;/i&gt;&lt;/p&gt;
+                                            &lt;div&gt;&lt;img src="post.png"&gt;&lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;div&gt;&lt;img src="pay.png" width="150px"&gt;&lt;/div&gt;
+                                                &lt;p class="info-l"&gt;Всі операції на нашому&lt;br&gt; сайті безпечні&lt;br&gt; і проходять з використанням&lt;br&gt; шифрованого SSL&lt;/p&gt;          
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </body>
+                    </pre>
+
+                    <h3>CSS</h3>
+                    <code>
+                        body {
+                            font-family: Arial, sans-serif;
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                        }
+                        .container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            min-height: 100vh;
+                        }
+                        .footer {
+                            width: 100%;
+                            padding: 20px 0;
+                            text-align: center;
+                        }
+                        .content {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: left;
+                            padding: 20px;
+                        }
+                        .course-info {
+                            display: flex;
+                            align-items: left;
+                            margin-bottom: 20px;
+                        }
+                        .course-info img {
+                            margin-right: 20px;
+                        }
+                        .course-description {
+                            text-align: left;
+                        }
+                        .similar-courses {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            gap: 20px;
+                            margin-top: 20px;
+                            border-bottom: 1px solid #ccc; 
+                        }
+                        .similar-course {
+                            width: 200px;
+                            padding: 10px;
+                        }
+                        .sale{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                        }
+                        .price {
+                            color: blue;
+                            text-decoration: line-through;
+                            font-size: 15px;
+                        }
+                        .discounted-price {
+                            color: orange;
+                            font-size: 24px;
+                        }
+                        .economy {
+                            color: green;
+                            font-family: 'Courier New', Courier, monospace;
+                        }
+                        .hurry {
+                            color: orange;
+                        }
+                        .discribe {
+                            font-size: 18px;
+                            font-family: 'Times New Roman', Times, serif;   
+                            color: gray;
+                        }
+                        .benefits p {
+                            font-size: 20px;
+                            font-family: 'Times New Roman', Times, serif;   
+                            color: gray;
+                        }
+                        .buy-button {
+                            background-color: red;
+                            color: white;
+                            font-size: large;
+                            width: 300px;
+                            padding: 10px 20px;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                        .info {
+                            font-size: 18px;
+                            font-family: 'Times New Roman', Times, serif;   
+                            color: gray;
+                        }
+                        .full-price {
+                            text-decoration: line-through;
+                            font-size: 15px;
+                        }
+                        .disc-price {
+                            color: blue;
+                            font-size: 15px;
+                        }
+                        .buy {  
+                            text-decoration: underline;
+                        }
+                        .contacts {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-left: 550px;
+                            margin-right: 550px;
+                            flex-direction: row;
+                        }
+                        .contacts p{
+                            font-size: 18px;
+                            font-family: 'Times New Roman', Times, serif;   
+                            color: gray;
+                            border-bottom: 1px solid #ccc;
+                        }
+                        .extra-info p{
+                            font-size: 15px;
+                            font-family: 'Times New Roman', Times, serif;   
+                            color: gray;
+                            text-align: left;
+                        }
+                        .lower-footer{
+                            margin-left: 550px;
+                            margin-right: 550px;
+                            display:flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+                        .info-l {
+                            font-size: 15px;
+                            font-family: 'Times New Roman', Times, serif;   
+                            color: gray;
+                            text-align: right;
+                        }
+                        .envelope {
+                            padding-right: 100px;
+                        }
+                    </code>
+                </div>
+                <div class="info-block" id="info3-8">
+                    <h2>Переваги та недоліки створення веб-додатків за допомогою таблиць та блоків (плаваючих блоків)</h2>
+    
+                    <h3>За допомогою таблиць:</h3>
+                    <h4>Переваги:</h4>
+                    <ul>
+                        <li>Простота використання</li>
+                        <li>Підтримка старих браузерів</li>
+                    </ul>
+                    <h4>Недоліки:</h4>
+                    <ul>
+                        <li>Несемантичний код</li>
+                        <li>Важкість управління макетом</li>
+                    </ul>
+                
+                    <h3>За допомогою блоків (плаваючих блоків):</h3>
+                    <h4>Переваги:</h4>
+                    <ul>
+                        <li>Семантичний код</li>
+                        <li>Гнучкість та контроль</li>
+                    </ul>
+                    <h4>Недоліки:</h4>
+                    <ul>
+                        <li>Складність для початківців</li>
+                        <li>Потенційні проблеми з вирівнюванням та перекриттям</li>
+                    </ul>
+                    <h3>FLEXBOX</h3>
+                    <p>Робота з флексбоксами дозволяє зручно та ефективно організовувати розміщення елементів на веб-сторінці.<br>
+                         Основні переваги роботи з флексбоксами включають:<br>
+                        Гнучкість: Флексбокси дають можливість зручно розміщувати елементи у веб-дизайні, незалежно від їхнього розміру
+                        та порядку.
+                        Простота використання: Синтаксис флексбоксів легко зрозуміти та використовувати, що робить їх дружніми до розробників.<br>
+                        Вертикальне та горизонтальне центрування: Флексбокси забезпечують зручні засоби для центрування елементів як по вертикалі, так і по горизонталі.<br>
+                        Адаптивність: Флексбокси дозволяють легко створювати адаптивний веб-дизайн, що забезпечує правильне відображення сторінки на різних пристроях та розмірах екрану.<br>
+                        Порядок: Зміна порядку елементів за допомогою флексбоксів дозволяє створювати різноманітні макети та покращує доступність контенту для користувачів.<br>
+                        Незважаючи на ці переваги, робота з флексбоксами має також деякі недоліки:<br>
+                        Сумісність: Незважаючи на те, що більшість сучасних браузерів підтримують флексбокси, можуть виникати проблеми з сумісністю на старих версіях деяких браузерів.<br>
+                        Складність: Деякі аспекти флексбоксів, такі як управління просторами, можуть бути складні для реалізації у великих проектах.<br>
+                        У цілому, флексбокси є потужним інструментом для створення адаптивних та зручних макетів у веб-дизайні, які забезпечують гнучкість та ефективність у роботі з розміщенням елементів.</p>
+                </div>
         </div>
 
     </div>
