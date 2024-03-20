@@ -162,8 +162,10 @@
                 <div class="ellipse" onclick="showInfo(3,4)"><p>Завдання 2: Гумова таблична верстка</p></div>
                 <div class="ellipse" onclick="showInfo(3,5)"><p>Завдання 2: Фіксована блокова верстка</p></div>
                 <div class="ellipse" onclick="showInfo(3,6)"><p>Завдання 2: Гумова блокова верстка</p></div>
-                <div class="ellipse" onclick="showInfo(3,7)"><p>Завдання 3: FLEXBOX</p></div>
-                <div class="ellipse" onclick="showInfo(3,8)"><p>Висновки</p></div>
+                <div class="ellipse" onclick="showInfo(3,7)"><p>Завдання 3: Зовнішній вигляд сторінки</p></div>
+                <div class="ellipse" onclick="showInfo(3,8)"><p>Завдання 3: HTML</p></div>
+                <div class="ellipse" onclick="showInfo(3,9)"><p>Завдання 3: CSS</p></div>
+                <div class="ellipse" onclick="showInfo(3,10)"><p>Висновки</p></div>
             </div>
             <div class="content">
                 <div class="info-block" id="info1-1">
@@ -254,7 +256,7 @@
                         списками, різноманітними властивостями кольору і фону, зовнішними та
                         внутрішними відступами, плаваючими елементами, оформленням текстових
                         елементів</span></h3>
-                    <h3>Сайт: <span><a href="https://github.com/Blindcoke/Bakery-website/tree/lab2">https://github.com/Blindcoke/Bakery-website</a></span></h3>
+                    <h3>Власний сайт: <span><a href="https://github.com/Blindcoke/Bakery-website/tree/lab2">https://github.com/Blindcoke/Bakery-website</a></span></h3>
                 </div>
                 <div class="info-block" id="info2-2">
                     <h3>Способи підключення стилів</h3>
@@ -391,6 +393,7 @@
                         сторінок
                         <br>⎯ придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX</span></h3>
                     <h3>Сайт: <span><a href="https://github.com/Blindcoke/Bakery-website/tree/lab2">https://github.com/Blindcoke/Bakery-website</a></span></h3>
+                    <h3>Сайт з верстки: <span><a href="https://blindcoke.github.io/web_3/">https://blindcoke.github.io/web_3/</a></span></h3>
                 </div>
                 <div class="info-block" id="info3-2">
                     <h3>Зовнішній вигляд макету</h3>
@@ -599,6 +602,8 @@
                 <div class="info-block" id="info3-7">
                     <h3>Вигляд сторінки</h3>
                     <img src = "task3.png"  alt="web_main" width="100%">
+                </div>
+                <div class="info-block" id="info3-8">
                     <h3>HTML</h3>
                     <pre>
                         <body>
@@ -687,88 +692,90 @@
                             </code>
                         </body>
                     </pre>
-
+                </div>
+                <div class="info-block" id="info3-9">
                     <h3>CSS</h3>
-                    <code>
-                        body {
+                    &lt;pre&gt;
+                    &lt;code&gt;
+                        body &#123;
                             font-family: Arial, sans-serif;
                             margin: 0;
                             padding: 0;
                             box-sizing: border-box;
-                        }
-                        .container {
+                        &#125;
+                        .container &#123;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
                             min-height: 100vh;
-                        }
-                        .footer {
+                        &#125;
+                        .footer &#123;
                             width: 100%;
                             padding: 20px 0;
                             text-align: center;
-                        }
-                        .content {
+                        &#125;
+                        .content &#123;
                             display: flex;
                             flex-direction: column;
                             align-items: left;
                             padding: 20px;
-                        }
-                        .course-info {
+                        &#125;
+                        .course-info &#123;
                             display: flex;
                             align-items: left;
                             margin-bottom: 20px;
-                        }
-                        .course-info img {
+                        &#125;
+                        .course-info img &#123;
                             margin-right: 20px;
-                        }
-                        .course-description {
+                        &#125;
+                        .course-description &#123;
                             text-align: left;
-                        }
-                        .similar-courses {
+                        &#125;
+                        .similar-courses &#123;
                             display: flex;
                             flex-wrap: wrap;
                             justify-content: center;
                             gap: 20px;
                             margin-top: 20px;
                             border-bottom: 1px solid #ccc; 
-                        }
-                        .similar-course {
+                        &#125;
+                        .similar-course &#123;
                             width: 200px;
                             padding: 10px;
-                        }
-                        .sale{
+                        &#125;
+                        .sale &#123;
                             display: flex;
                             flex-direction: row;
                             align-items: center;
-                        }
-                        .price {
+                        &#125;
+                        .price &#123;
                             color: blue;
                             text-decoration: line-through;
                             font-size: 15px;
-                        }
-                        .discounted-price {
+                        &#125;
+                        .discounted-price &#123;
                             color: orange;
                             font-size: 24px;
-                        }
-                        .economy {
+                        &#125;
+                        .economy &#123;
                             color: green;
                             font-family: 'Courier New', Courier, monospace;
-                        }
-                        .hurry {
+                        &#125;
+                        .hurry &#123;
                             color: orange;
-                        }
-                        .discribe {
+                        &#125;
+                        .discribe &#123;
                             font-size: 18px;
                             font-family: 'Times New Roman', Times, serif;   
                             color: gray;
-                        }
-                        .benefits p {
+                        &#125;
+                        .benefits p &#123;
                             font-size: 20px;
                             font-family: 'Times New Roman', Times, serif;   
                             color: gray;
-                        }
-                        .buy-button {
+                        &#125;
+                        .buy-button &#123;
                             background-color: red;
                             color: white;
                             font-size: large;
@@ -777,61 +784,62 @@
                             border: none;
                             border-radius: 5px;
                             cursor: pointer;
-                        }
-                        .info {
+                        &#125;
+                        .info &#123;
                             font-size: 18px;
                             font-family: 'Times New Roman', Times, serif;   
                             color: gray;
-                        }
-                        .full-price {
+                        &#125;
+                        .full-price &#123;
                             text-decoration: line-through;
                             font-size: 15px;
-                        }
-                        .disc-price {
+                        &#125;
+                        .disc-price &#123;
                             color: blue;
                             font-size: 15px;
-                        }
-                        .buy {  
+                        &#125;
+                        .buy &#123;  
                             text-decoration: underline;
-                        }
-                        .contacts {
+                        &#125;
+                        .contacts &#123;
                             display: flex;
                             justify-content: space-between;
                             margin-left: 550px;
                             margin-right: 550px;
                             flex-direction: row;
-                        }
-                        .contacts p{
+                        &#125;
+                        .contacts p &#123;
                             font-size: 18px;
                             font-family: 'Times New Roman', Times, serif;   
                             color: gray;
                             border-bottom: 1px solid #ccc;
-                        }
-                        .extra-info p{
+                        &#125;
+                        .extra-info p &#123;
                             font-size: 15px;
                             font-family: 'Times New Roman', Times, serif;   
                             color: gray;
                             text-align: left;
-                        }
-                        .lower-footer{
+                        &#125;
+                        .lower-footer &#123;
                             margin-left: 550px;
                             margin-right: 550px;
                             display:flex;
                             flex-direction: row;
                             justify-content: space-between;
-                        }
-                        .info-l {
+                        &#125;
+                        .info-l &#123;
                             font-size: 15px;
                             font-family: 'Times New Roman', Times, serif;   
                             color: gray;
                             text-align: right;
-                        }
-                        .envelope {
+                        &#125;
+                        .envelope &#123;
                             padding-right: 100px;
-                        }
-                    </code>
+                        &#125;
+                    &lt;/code&gt;
+                &lt;/pre&gt;
                 </div>
-                <div class="info-block" id="info3-8">
+                <div class="info-block" id="info3-10">
                     <h2>Переваги та недоліки створення веб-додатків за допомогою таблиць та блоків (плаваючих блоків)</h2>
     
                     <h3>За допомогою таблиць:</h3>
