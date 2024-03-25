@@ -54,6 +54,29 @@
             margin: 10px 0;
             cursor: pointer;
         }
+        .subsection {
+            display: none;
+        }
+
+        .subsection.active {
+            display: block;
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-end; 
+        }
+
+        .ellipse-small {
+            width: 120px;
+            height: 60px;
+            font-size: 12px;
+            border: 1px solid black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center; 
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
         .lab-info:hover {
             background-color: lightgrey;
         }
@@ -71,6 +94,8 @@
             justify-content: space-between;
             flex-direction: column;
             margin-top: 20px;
+            width: 180px;
+            margin-right: 30px;
         }
         .info-block {
             display: none;
@@ -150,21 +175,33 @@
                 <h2>Лабораторна робота 2</h2>
                 <div class="ellipse" onclick="showInfo(2,1)"><p>Тема, мета ЛР, Місце розташування сайту</p></div>
                 <div class="ellipse" onclick="showInfo(2,2)"><p>Способи підключення стилів</p></div>
-                <div class="ellipse" onclick="showInfo(2,3)"><p>Селектори</p></div>
-                <div class="ellipse" onclick="showInfo(2,4)"><p>CSS: Шрифти Текст Таблиці Фон Контур</p></div>
-                <div class="ellipse" onclick="showInfo(2,5)"><p>Висновки</p></div>
+                <div class="ellipse" onclick="showSubsection(1)"><p>Селектори</p></div>
+                <div class="subsection" id="subsection1">
+                    <div class="ellipse-small" onclick="showInfo(2,3)"><p>Селектори тегу</p></div>
+                    <div class="ellipse-small" onclick="showInfo(2,4)"><p>Селектори класу</p></div>
+                    <div class="ellipse-small" onclick="showInfo(2,5)"><p>Селектори ідентифікаторів</p></div>
+                </div>
+                <div class="ellipse" onclick="showInfo(2,6)"><p>CSS: Шрифти Текст Таблиці Фон Контур</p></div>
+                <div class="ellipse" onclick="showInfo(2,7)"><p>Висновки</p></div>
             </div>
             <div class="lab-block" id="lab3">
                 <h2>Лабораторна робота 3</h2>
                 <div class="ellipse" onclick="showInfo(3,1)"><p>Тема, мета ЛР, Місце розташування сайту</p></div>
                 <div class="ellipse" onclick="showInfo(3,2)"><p>Завдання 1</p></div>
-                <div class="ellipse" onclick="showInfo(3,3)"><p>Завдання 2: Фіксована таблична верстка</p></div>
-                <div class="ellipse" onclick="showInfo(3,4)"><p>Завдання 2: Гумова таблична верстка</p></div>
-                <div class="ellipse" onclick="showInfo(3,5)"><p>Завдання 2: Фіксована блокова верстка</p></div>
-                <div class="ellipse" onclick="showInfo(3,6)"><p>Завдання 2: Гумова блокова верстка</p></div>
-                <div class="ellipse" onclick="showInfo(3,7)"><p>Завдання 3: Зовнішній вигляд сторінки</p></div>
-                <div class="ellipse" onclick="showInfo(3,8)"><p>Завдання 3: HTML</p></div>
-                <div class="ellipse" onclick="showInfo(3,9)"><p>Завдання 3: CSS</p></div>
+                <div class="ellipse" onclick="showSubsection(2)"><p>Завдання 2</p></div>
+                <div class="subsection" id="subsection2">
+                    <div class="ellipse-small" onclick="showInfo(3,3)"><p>Завдання 2: Фіксована таблична верстка</p></div>
+                    <div class="ellipse-small" onclick="showInfo(3,4)"><p>Завдання 2: Гумова таблична верстка</p></div>
+                    <div class="ellipse-small" onclick="showInfo(3,5)"><p>Завдання 2: Фіксована блокова верстка</p></div>
+                    <div class="ellipse-small" onclick="showInfo(3,6)"><p>Завдання 2: Гумова блокова верстка</p></div>
+                </div>
+
+                <div class="ellipse" onclick="showSubsection(3)"><p>Завдання 3: FLEXBOX</p></div>
+                <div class="subsection" id="subsection3">
+                    <div class="ellipse-small" onclick="showInfo(3,7)"><p>Завдання 3: Зовнішній вигляд сторінки</p></div>
+                    <div class="ellipse-small" onclick="showInfo(3,8)"><p>Завдання 3: HTML</p></div>
+                    <div class="ellipse-small" onclick="showInfo(3,9)"><p>Завдання 3: CSS</p></div>
+                </div>
                 <div class="ellipse" onclick="showInfo(3,10)"><p>Висновки</p></div>
             </div>
             <div class="content">
@@ -267,48 +304,50 @@
                         Inline CSS: Можна також задати стилі безпосередньо всередині тегів HTML за допомогою атрибуту style. </p>
                 </div>
                 <div class="info-block" id="info2-3">
-                    <h3>Селектори</h3>
-                    <div class="selectors">
-                        <div class="selector">
-                            <h4>Селектор класу</h4>
-                            <p><pre>
-                                .price {
-                                    background-color: #5394A2; 
-                                    color: black;
-                                    text-align: center;
-                                    font-size: 24px;
-                                    width: 70px;
-                                    height: 45px;
-                                    border-radius: 30%; 
-                                    cursor: pointer; 
-                                    display: flex; 
-                                    justify-content: center; 
-                                    align-items: center; 
-                                    transition: background-color 0.3s; 
-                                }
-                        
-                                .price:hover {
-                                    background-color: #0056b3; 
-                                }
-                            </pre></p>
-                            <img src="Capture.PNG" alt="Селектор класу" height="50px">
-                        </div>
-                        <div class="selector">
-                            <h4>Селектор ідентифікатора</h4>
-                            <p><pre>
-                                #hot-news{
-                                    background-color: #D2A0A0;
-                                    overflow: hidden;
-                                }
-                                
-                                #hot-news h2 {
-                                    margin-top: 0;
-                                    font-family: 'Oooh Baby';
-                                    text-align: center; 
-                                }
-                            </pre></p>
-                            <img src="Capture2.PNG" alt="Селектор ідентифікатора" height="50px">
-                        </div>
+                    <div class="selector">
+                        <h4>Селектор класу</h4>
+                        <p><pre>
+                            .price {
+                                background-color: #5394A2; 
+                                color: black;
+                                text-align: center;
+                                font-size: 24px;
+                                width: 70px;
+                                height: 45px;
+                                border-radius: 30%; 
+                                cursor: pointer; 
+                                display: flex; 
+                                justify-content: center; 
+                                align-items: center; 
+                                transition: background-color 0.3s; 
+                            }
+                    
+                            .price:hover {
+                                background-color: #0056b3; 
+                            }
+                        </pre></p>
+                        <img src="Capture.PNG" alt="Селектор класу" height="50px">
+                    </div>
+                </div>
+                <div class="info-block" id="info2-4">
+                    <div class="selector">
+                        <h4>Селектор ідентифікатора</h4>
+                        <p><pre>
+                            #hot-news{
+                                background-color: #D2A0A0;
+                                overflow: hidden;
+                            }
+                            
+                            #hot-news h2 {
+                                margin-top: 0;
+                                font-family: 'Oooh Baby';
+                                text-align: center; 
+                            }
+                        </pre></p>
+                        <img src="Capture2.PNG" alt="Селектор ідентифікатора" height="50px">
+                    </div>
+                </div>
+                <div class="info-block" id="info2-5">
                         <div class="selector">
                             <h4>Селектор тегу</h4>
                             <p><pre>
@@ -321,13 +360,12 @@
                                     font-family: 'Open Sans', sans-serif;
                                     font-size: large;
                                 }
-                                
                             </pre></p>
                             <img src="Capture3.PNG" alt="Селектор тегу" height="50px">
                         </div>
-                    </div>
                 </div>
-                <div class="info-block" id="info2-4">
+                
+                <div class="info-block" id="info2-6">
                     <h3>Шрифти:</h3>
                     <pre>
                         h1 {
@@ -373,7 +411,7 @@
                         }
                     </pre>                        
                 </div>
-                <div class="info-block" id="info2-5">
+                <div class="info-block" id="info2-7">
                     <h3>Висновок: <span>У ході цієї лабораторної роботи ми ознайомилися з різними способами підключення стилів до веб-сторінок 
                         та їх застосування. Ми використовували вбудований CSS, зовнішні файли стилів та внутрішні стилі для задання вигляду елементів
                          на сторінці. Також ми досліджували різноманітні селектори для точного визначення елементів, до яких ми застосовували стилі.
@@ -901,6 +939,19 @@
                         block.classList.remove('active');
                     });
             document.getElementById(`info${infoNumber}-${contentNumber}`).classList.add('active');
+        }
+        function showSubsection(subsectionNumber) {
+            const subsection = document.getElementById('subsection' + subsectionNumber);
+            
+            if (subsection.classList.contains('active')) {
+                subsection.classList.remove('active'); // Hide the subsection if already active
+            } else {
+                const subsections = document.querySelectorAll('.subsection');
+                subsections.forEach(subsection => {
+                    subsection.classList.remove('active');
+                });
+                subsection.classList.add('active'); // Show the clicked subsection
+            }
         }
     </script>
 </body>
