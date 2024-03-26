@@ -73,6 +73,7 @@
             border-radius: 50%;
             display: flex;
             align-items: center; 
+            justify-content: center;
             margin: 10px 0;
             cursor: pointer;
         }
@@ -151,7 +152,7 @@
         <h1 class="title">Звіти з лабораторних робіт з дисципліни "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ ОСНОВИ FRONTEND ТА BACKEND РОЗРОБОК"</h1>
         <div class="student-info">
             <p>Студент гр. № ІО-16 Лашкул Єгор Сергійович</p>
-            <img src="a.jpg" alt="Фото студента" height="100px">
+            <img src="./img/a.jpg" alt="Фото студента" height="100px">
         </div>
         <div class="lab-nav">
             <div class="lab-info" onclick="showLab(1)">Лабораторна робота 1</div>
@@ -217,7 +218,20 @@
                 </div>
                 <div class="ellipse" onclick="showInfo(4,6)"><p>Висновки</p></div>
             </div>
-
+            <div class="lab-block" id="lab5">
+                <h2>Лабораторна робота 5</h2>
+                <div class="ellipse" onclick="showInfo(5,1)"><p>Постановка Задачі</p></div>
+                <div class="ellipse" onclick="showSubsection(5)"><p>Способи функціонального застосування JavaScript</p></div>
+                <div class="subsection" id="subsection5">
+                    <div class="ellipse-small" onclick="showInfo(5,2)"><p>Схема URL</p></div>
+                    <div class="ellipse-small" onclick="showInfo(5,3)"><p>Обробник подій</p></div>
+                    <div class="ellipse-small" onclick="showInfo(5,4)"><p>Підстанова(entity)</p></div>
+                    <div class="ellipse-small" onclick="showInfo(5,5)"><p>Вставка</p></div>
+                </div>
+                <div class="ellipse" onclick="showInfo(5,6)"><p>МАСИВИ</p></div>
+                <div class="ellipse" onclick="showInfo(5,7)"><p>Виконання 6 пункту</p></div>
+                <div class="ellipse" onclick="showInfo(5,8)"><p>ВИСНОВКИ</p></div>
+            </div>
 
             <div class="content">
                 <div class="info-block" id="info1-1">
@@ -341,7 +355,7 @@
                                 background-color: #0056b3; 
                             }
                         </pre></p>
-                        <img src="Capture.PNG" alt="Селектор класу" height="50px">
+                        <img src="./img/Capture.PNG" alt="Селектор класу" height="50px">
                     </div>
                 </div>
                 <div class="info-block" id="info2-4">
@@ -359,7 +373,7 @@
                                 text-align: center; 
                             }
                         </pre></p>
-                        <img src="Capture2.PNG" alt="Селектор ідентифікатора" height="50px">
+                        <img src="./img/Capture2.PNG" alt="Селектор ідентифікатора" height="50px">
                     </div>
                 </div>
                 <div class="info-block" id="info2-5">
@@ -376,7 +390,7 @@
                                     font-size: large;
                                 }
                             </pre></p>
-                            <img src="Capture3.PNG" alt="Селектор тегу" height="50px">
+                            <img src="./img/Capture3.PNG" alt="Селектор тегу" height="50px">
                         </div>
                 </div>
                 
@@ -461,7 +475,7 @@
                          використовується для групування певних частин контенту сторінки.
                          Найбільша увага приділяється використанню гнучких контейнерів (display: flex), що дозволяє створювати адаптивний і гнучкий дизайн.
                     </p>
-                    <img src = "web_main.jpg"  alt="web_main" width="100%">
+                    <img src = "./img/web_main.jpg"  alt="web_main" width="100%">
                     <h3>Код макету:</h3>
                         <pre>
                             &lt;!DOCTYPE html&gt;
@@ -654,7 +668,7 @@
                 </div>
                 <div class="info-block" id="info3-7">
                     <h3>Вигляд сторінки</h3>
-                    <img src = "task3.png"  alt="web_main" width="100%">
+                    <img src = "./img/task3.png"  alt="web_main" width="100%">
                 </div>
                 <div class="info-block" id="info3-8">
                     <h3>HTML</h3>
@@ -960,33 +974,91 @@
                     <h2>Створення десктопної версії</h2>
                     <p>Для створення десктопної версії було використано CSS-правила, які забезпечують коректне відображення елементів на великих екранах.<br>
                         Навігаційне меню розташовано горизонтально, елементи вирівняні за горизонталем і відокремлені між собою відстанню.</p>
-                    <img src="lab4_desk.png" alt="lab4_desk" width="50%">
-                    <img src ="web_main.jpg" alt="web_main" width="79%">
+                    <img src="./img/lab4_desk.png" alt="lab4_desk" width="50%">
+                    <img src ="./img/web_main.jpg" alt="web_main" width="79%">
                 </div>
                 <div class="info-block" id="info4-4">
                     <h2>Створення планшетної версії</h2>
                     <p>Для планшетної версії було застосовано медіа-запити, які активуються при певному розмірі екрану. <br>
                         Навігаційне меню іншим чином відображається на планшетних пристроях, зберігаючи логіку розташування елементів та зручність користування.</p>
-                    <img src="lab4_laptop.png" alt="lab4_desk" width="50%">
-                    <img src ="lab4_laptopv.png" alt="web_main" width="79%">
+                    <img src="./img/lab4_laptop.png" alt="lab4_desk" width="50%">
+                    <img src ="./img/lab4_laptopv.png" alt="web_main" width="79%">
                 </div>
                 <div class="info-block" id="info4-5">
                     <h2>Створення мобільної версії</h2>
                     <p>Мобільна версія була розроблена з урахуванням скороченого простору та дотриманням принципів <br>
                         "Mobile First". Навігаційне меню було перероблено в мобільному стилі, з використанням "гамбургер" меню для зручного доступу до пунктів.</p>
-                    <img src="lab4_mob.png" alt="lab4_desk" width="50%">
-                    <img src ="lab4_mobv.png" alt="web_main" width="79%">
+                    <img src="./img/lab4_mob.png" alt="lab4_desk" width="50%">
+                    <img src ="./img/lab4_mobv.png" alt="web_main" width="79%">
                 </div>
                 <div class="info-block" id="info4-6">
                     <h2>Висновок</h2>
                     <p>Лабораторна робота з адаптивною версткою в HTML виявилася цікавою та корисною.Під час роботи було вивчено принципи створення адаптивних веб-сайтів, використання медіа-запитів та CSS-правил для адаптації контенту до різних типів пристроїв.</p>
-                    
                     <p>Створення десктопної, планшетної та мобільної версій веб-сторінки вимагало ретельного планування та використання різних підходів до розміщення та оформлення елементів. Десктопна версія спрямована на великі екрани та має більш розгорнутий макет, планшетна версія адаптується до середніх розмірів екранів, тоді як мобільна версія оптимізована для використання на маленьких пристроях.</p>
-                    
                     <p>Використання медіа-запитів дозволило змінювати оформлення сторінки в залежності від розміру екрану, що забезпечило коректне відображення контенту на різних пристроях. Додатково, стратегія "Mobile First" дозволила зосередитися на розробці мобільної версії веб-сторінки, забезпечуючи оптимальний досвід користувача для мобільних пристроїв.</p>
-                    
                     <p>У результаті виконання лабораторної роботи було отримано практичні навички з адаптивної верстки веб-сторінок, які можуть бути використані для подальшого розвитку та покращення веб-проєктів.</p>
                 </div>
+
+
+                <div class="info-block" id="info5-1">
+                    <h3>Тема: <span>ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. 
+                        ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ МОВИ JAVASCRIPT</span></h3>
+                    <h3>Мета: <span>Придбати практичні навички роботи з масивами у js-сценаріях.  Реалізація програм засовами мови JAVASCRIPT </span></h3>
+                </div>
+                <div class="info-block" id="info5-2">
+                    <h3>Схема URL</h3>
+                    <p>Схема URL: JavaScript може використовуватися для маніпулювання URL-адресами. Наприклад,
+                         можна додавати, змінювати або видаляти параметри з URL-адреси за допомогою JavaScript.</p>
+                    <img src="./img/urlschema.png">
+                </div>
+                <div class="info-block" id="info5-3">
+                    <h3>Обробник подій</h3>
+                    <p>Обробник подій: JavaScript може використовуватися для створення обробників подій
+                         для реагування на дії користувачів або на зміни в додатку</p>
+                    <img src="./img/event.png">
+                </div>
+                <div class="info-block" id="info5-4">
+                    <h3>Підстанова(entity)</h3>
+                    <p>Підстановка (шаблонізація): JavaScript може використовуватися для заміни
+                         певних шаблонів чи підстановок у рядках або HTML-коді.</p>
+                    <img src="./img/template.png">
+                </div>
+                <div class="info-block" id="info5-5">
+                    <h3>Вставка</h3>
+                    <p>Вставка: JavaScript може використовуватися для динамічної вставки вмісту 
+                        на сторінку, наприклад, елементів HTML, тексту чи зображень.</p>
+                    <img src="./img/insert.png"">
+                </div>
+                <div class="info-block" id="info5-6">
+                    <h3>Масиви</h3>
+                    <p>Залікова №1614: 4 варіант</p>
+                    <h3>Завдання</h3>
+                    <img src="./img/asslab5.png" width="70%">
+                    <h3>Код</h3>
+                    <img src="./img/codelab5.png">
+                    <h3>Резуьтат</h3>
+                    <img src="./img/reslab5.png">
+                </div>
+                <div class="info-block" id="info5-7">
+                    <h3>Редактор тексту</h3>
+                    <p>Залікова №1614: 4 варіант</p>
+                    <h3>Завдання</h3>
+                    <img src="./img/asslab5_2.png">
+                    <h3>Код</h3>
+                    <img src="./img/codeLab5_2.png">
+                    <img src="./img/codeLab5_2_2.png">
+                    <h3>Резуьтат</h3>
+                    <img src="./img/reslab5_2.png">
+                </div>
+                <div class="info-block" id="info5-8">
+                    <h2>Висновок</h2>
+                    <p>Виконані завдання в цій лабораторній роботі демонструють різні аспекти роботи з JavaScript, включаючи роботу з масивами, функціями та створенням інтерактивних елементів інтерфейсу.</p>
+                    <p>У першій частині завдання ми реалізували алгоритм обчислення масиву C на основі двох заданих масивів A та B за певною формулою. Ми створили функції для обчислення масиву C, пошуку максимального елемента та його індексу, перестановки елементів та сортування масиву методом бульбашки. Використання функцій зробило код більш модульним, зрозумілим і легким для повторного використання.</p>
+                    <p>У другій частині завдання ми створили простий текстовий редактор з функціями форматування тексту, такими як напівжирність, нахил, підкреслювання, зміна кольору тексту та переведення регістру символів. Ця задача продемонструвала роботу з DOM-маніпуляціями, обробку подій та застосування стилів до елементів веб-сторінки.</p> 
+                    <p>Загалом, ці завдання дозволили практикувати різні аспекти JavaScript, включаючи роботу з масивами, функціями, циклами, умовними операторами та обробкою подій. Вони також показали, як створювати інтерактивні веб-інтерфейси з використанням JavaScript.</p>
+                    <p>Під час виконання цих завдань я підвищив свої навички в програмуванні на JavaScript, зрозумів важливість модульності та повторного використання коду за допомогою функцій, а також практикував роботу з веб-інтерфейсами та обробкою подій. Ця лабораторна робота була корисною для вдосконалення моїх навичок у JavaScript та веб-розробці в цілому.</p>
+                </div>
+
         </div>
 
     </div>
@@ -1014,13 +1086,13 @@
             const subsection = document.getElementById('subsection' + subsectionNumber);
             
             if (subsection.classList.contains('active')) {
-                subsection.classList.remove('active'); // Hide the subsection if already active
+                subsection.classList.remove('active'); 
             } else {
                 const subsections = document.querySelectorAll('.subsection');
                 subsections.forEach(subsection => {
                     subsection.classList.remove('active');
                 });
-                subsection.classList.add('active'); // Show the clicked subsection
+                subsection.classList.add('active'); 
             }
         }
     </script>
