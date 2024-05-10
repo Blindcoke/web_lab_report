@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Завдання 4</title>
+
+</head>
+<body>
+
+<h1 class="title">Завдання 4</h1>
+
+
+<div id="square"></div>
+
+<button onclick="decreaseSize()">Зменшити</button>
+<button onclick="increaseSize()">Збільшити</button>
+
+<script>
+    var square = document.getElementById("square");
+    var computedStyle = window.getComputedStyle(square);
+    var currentSize = parseInt(computedStyle.getPropertyValue("width"), 10);
+
+    function decreaseSize() {
+        currentSize -= 15; 
+        square.style.width = currentSize + "px";
+        square.style.height = currentSize + "px";
+    }
+
+    function increaseSize() {
+        currentSize += 15; 
+        square.style.width = currentSize + "px";
+        square.style.height = currentSize + "px";
+    }
+</script>
+
+</body>
+</html>

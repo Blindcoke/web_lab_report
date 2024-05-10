@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Завдання 6</title>
+</head>
+<body>
+
+<h1 class="title">Завдання 6</h1>
+<ul id="list">
+    <li>1</li>
+    <li>4</li>
+    <li>8</li>
+    <li>16</li>
+    <li>32</li>
+    <li>64</li>
+</ul>
+
+<button onclick="duplicateItems()">Подвоїти</button>
+
+<script>
+    function duplicateItems() {
+        var list = document.getElementById("list").getElementsByTagName("li");
+        for (var i = 0; i < list.length; i++) {
+            var currentValue = parseInt(list[i].innerHTML);
+            var newValue = currentValue * 2; 
+            list[i].innerHTML = newValue;
+        }
+    }
+</script>
+
+</body>
+</html>

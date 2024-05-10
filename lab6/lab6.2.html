@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+<title>Завдання 2</title>
+</head>
+<body>
+
+<h1 class="title">Завдання 2</h1>
+<div class="container">
+    <button onclick="swapInputs()">SWAP ME</button>
+    <input type="text" id="input1"><br><br>
+    <input type="text" id="input2"><br><br>
+    
+</div>
+
+<script>
+    function swapInputs() {
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        
+        document.getElementById("input1").value = input2;
+        document.getElementById("input2").value = input1;
+    }
+</script>
+
+</body>
+</html>
